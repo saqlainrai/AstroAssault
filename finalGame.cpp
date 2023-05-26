@@ -122,6 +122,7 @@ char character5 = 18;  // midlle arrow ↕
    @ | | @
 */
 
+// Main Character
 char newJet[7][13] = {
     {' ', ' ', ' ', ' ', ' ', ' ', '^', ' ', ' ', ' ', ' ', ' ', ' '},
     {' ', '0', ' ', ' ', ' ', '|', '|', '|', ' ', ' ', ' ', '0', ' '},
@@ -352,12 +353,6 @@ int main()
 
                     if (health == 0)
                     {
-                        // system("cls");
-                        // printHeader();
-                        // printGameOver();
-                        // getch();
-                        // cout << "Loop terminated";
-                        // getch();
                         gamePlaying = 0;
                     }
                 }
@@ -794,8 +789,6 @@ void moveEnemy2Horizontal()
             Enemy2Direction = "Right";
         }
     }
-    // gotoxy(EnemyX + 2, EnemyY + 1);
-    // cout << "o";
 }
 void printEnemy2()
 {
@@ -902,15 +895,8 @@ void moveEnemy3Horizontal()
         if (next == ' ' || next == '.')
         {
             eraseEnemy3();
-            // gotoxy(Enemy3X, Enemy3Y);
-            // cout << "    ";
             Enemy3X++;
             printEnemy3();
-            // gotoxy(Enemy3X, Enemy3Y);
-            // for (int x = 0; x < 5; x++)
-            // {
-            //     cout << Enemy[x];
-            // }
         }
         if (next == '%')
         {
@@ -923,15 +909,8 @@ void moveEnemy3Horizontal()
         if (next == ' ' || next == '.')
         {
             eraseEnemy3();
-            // gotoxy(Enemy3X, Enemy3Y);
-            // cout << "     ";
             Enemy3X--;
             printEnemy3();
-            // gotoxy(Enemy3X, Enemy3Y);
-            // for (int x = 0; x < 5; x++)
-            // {
-            //     cout << Enemy[x];
-            // }
         }
         if (next == '%')
         {
@@ -1136,8 +1115,3 @@ void printGameOver()
     cout << "              ###########.         =#=       .***************::####.   -######.           " << endl;
     getch();
 }
-/*
-1. how we will print while moving the array
-2. the game started flickering while a little large character
-3. IN PRINT THE KEYSTROCKS USED IN the game playing for different functions
-*/
